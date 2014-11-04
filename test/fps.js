@@ -3,7 +3,7 @@ var constraints = require('../');
 var expected = {
   video: {
     mandatory: {
-      fps: {
+      frameRate: {
         max: 5
       }
     }
@@ -11,7 +11,21 @@ var expected = {
   audio: true
 };
 
+var expectedOptional = {
+  video: {
+    optional: [
+      { frameRate: { max: 5 } }
+    ]
+  },
+  audio: true
+};
+
 test('apply maxfps constraints', function(t) {
   t.plan(1);
-  t.deepEqual(constraints.fps({ video: true, audio: true }, 5), expected);
+  t.deepEqual(constraints.fps(5, { video: true, audio: true }), expected);
+});
+
+test('apply maxfps constraints - optional', function(t) {
+  t.plan(1);
+  t.deepEqual(constraints.fps.optional(5, { video: true, audio: true }), expectedOptional);
 });
