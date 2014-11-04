@@ -22,7 +22,7 @@ var expectedOptional = {
 
 test('apply maxfps constraints', function(t) {
   t.plan(1);
-  t.deepEqual(constraints.fps(5, { video: true, audio: true }), expected);
+  t.deepEqual(constraints.fps.mandatory(5, { video: true, audio: true }), expected);
 });
 
 test('apply maxfps constraints - optional', function(t) {
