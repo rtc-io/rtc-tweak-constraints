@@ -26,20 +26,27 @@ var tweak = module.exports = function(targets, mediaType) {
     };
   }
 
-  var applyTweak = curry(function(section, constraints, value) {
+  var applyTweak = curry(function(section, value, constraints) {
     var mediaConstraints = constraints[mediaType];
+    var sectionData;
 
     if ((! mediaConstraints) || typeof mediaConstraints == 'boolean') {
       mediaConstraints = constraints[mediaType] = {};
     }
 
     // ensure we have the required section
+    sectionData = mediaConstraints[section];
     if (! mediaConstraints[section]) {
-      mediaConstraints[section] = {};
+      sectionData = mediaConstraints[section] = section === 'mandatory' ? {} : [];
     }
 
     targets.forEach(function(updater) {
-      updater(mediaConstraints[section], value);
+      if (Array.isArray(sectionData)) {
+        updater(sectionData[sectionData.length] = {}, value);
+        return;
+      }
+
+      updater(sectionData, value);
     });
 
     return constraints;
@@ -59,4 +66,4 @@ var tweak = module.exports = function(targets, mediaType) {
   return tweaker;
 };
 
-tweak.fps = tweak.maxfps = tweak(['fps.max']);
+tweak.fps = tweak.maxfps = tweak(['frameRate.max']);
