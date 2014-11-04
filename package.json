@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/rtc-io/rtc-constraints/issues"
   },
-  "homepage": "https://github.com/rtc-io/rtc-constraints"
+  "homepage": "https://github.com/rtc-io/rtc-constraints",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  },
+  "dependencies": {
+    "curry": "^1.2.0"
+  }
 }
