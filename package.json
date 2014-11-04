@@ -1,14 +1,14 @@
 {
-  "name": "rtc-constraints",
+  "name": "rtc-tweak-constraints",
   "version": "1.0.0",
-  "description": "A series of functional helpers for applying transforms to media capture constraints",
+  "description": "A series of functional helpers for applying limits to media capture constraints",
   "main": "index.js",
   "scripts": {
     "test": "node test/all.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rtc-io/rtc-constraints.git"
+    "url": "https://github.com/rtc-io/rtc-limit.git"
   },
   "keywords": [
     "rtc.io",
@@ -20,10 +20,12 @@
   "author": "Damon Oehlman <damon.oehlman@nicta.com.au>",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/rtc-io/rtc-constraints/issues"
+    "url": "https://github.com/rtc-io/rtc-limit/issues"
   },
-  "homepage": "https://github.com/rtc-io/rtc-constraints",
+  "homepage": "https://github.com/rtc-io/rtc-limit",
   "devDependencies": {
+    "getusermedia": "^1.1.0",
+    "rtc-ui": "^1.1.1",
     "tape": "^3.0.1"
   },
   "dependencies": {
