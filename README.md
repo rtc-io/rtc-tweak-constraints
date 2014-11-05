@@ -36,39 +36,39 @@ getUserMedia(constraints, function(err, stream) {
 
 ## Reference
 
-### `tweak.maxwidth(value, => constraints) => constraints`
+##### `tweak.maxwidth(value, => constraints) => constraints`
 
 Apply appropriate maxwidth constraints.
 
-### `tweak.minwidth(value, => constraints) => constraints`
+##### `tweak.minwidth(value, => constraints) => constraints`
 
 Apply appropriate minwidth constraints.
 
-### `tweak.width(value, => constraints) => constraints`
+##### `tweak.width(value, => constraints) => constraints`
 
 Apply both minwidth and maxwidth constraints.
 
-### `tweak.maxheight(value, => constraints) => constraints`
+##### `tweak.maxheight(value, => constraints) => constraints`
 
 Apply appropriate maxheight constraints.
 
-### `tweak.minheight(value, => constraints) => constraints`
+##### `tweak.minheight(value, => constraints) => constraints`
 
 Apply appropriate minheight constraints.
 
-### `tweak.height(value, => constraints) => constraints`
+##### `tweak.height(value, => constraints) => constraints`
 
 Apply both minheight and maxheight constraints.
 
-### `tweak.maxfps(value, => constraints) => constraints`
+##### `tweak.maxfps(value, => constraints) => constraints`
 
 Apply appropriate max framerate constraints.
 
-### `tweak.minfps(value, => constraints) => constraints`
+##### `tweak.minfps(value, => constraints) => constraints`
 
 Apply appropriate min framerate constraints.
 
-### `tweak.fps(value, => constraints) => constraints`
+##### `tweak.fps(value, => constraints) => constraints`
 
 Apply both min and max framerate constraints.
 
