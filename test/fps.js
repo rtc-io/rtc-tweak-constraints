@@ -4,8 +4,11 @@ var expected = {
   video: {
     mandatory: {
       frameRate: {
+        min: 5,
         max: 5
-      }
+      },
+      minFrameRate: 5,
+      maxFrameRate: 5
     }
   },
   audio: true
@@ -14,7 +17,9 @@ var expected = {
 var expectedOptional = {
   video: {
     optional: [
-      { frameRate: { max: 5 } }
+      { minFrameRate: 5 },
+      { frameRate: { min: 5, max: 5 } },
+      { maxFrameRate: 5 }
     ]
   },
   audio: true
