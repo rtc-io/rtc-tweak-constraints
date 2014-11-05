@@ -91,15 +91,67 @@ var tweak = module.exports = function(targets, opts) {
   return tweaker;
 };
 
-/** ### `tweak.maxwidth(value, => constraints) => constraints` **/
+/**
+  ### `tweak.maxwidth(value, => constraints) => constraints`
+
+  Apply appropriate maxwidth constraints.
+**/
 tweak.maxwidth = tweak(KEYS_MAXWIDTH);
+
+/**
+  ### `tweak.minwidth(value, => constraints) => constraints`
+
+  Apply appropriate minwidth constraints.
+**/
 tweak.minwidth = tweak(KEYS_MINWIDTH);
+
+/**
+  ### `tweak.width(value, => constraints) => constraints`
+
+  Apply both minwidth and maxwidth constraints.
+**/
 tweak.width = tweak.w = tweak(KEYS_MINWIDTH.concat(KEYS_MAXWIDTH));
 
+
+/**
+  ### `tweak.maxheight(value, => constraints) => constraints`
+
+  Apply appropriate maxheight constraints.
+**/
 tweak.maxheight = tweak(KEYS_MAXHEIGHT);
+
+/**
+  ### `tweak.minheight(value, => constraints) => constraints`
+
+  Apply appropriate minheight constraints.
+**/
 tweak.minheight = tweak(KEYS_MINHEIGHT);
+
+/**
+  ### `tweak.height(value, => constraints) => constraints`
+
+  Apply both minheight and maxheight constraints.
+**/
 tweak.height = tweak.h = tweak(KEYS_MINHEIGHT.concat(KEYS_MAXHEIGHT));
 
+/**
+  ### `tweak.maxfps(value, => constraints) => constraints`
+
+  Apply appropriate max framerate constraints.
+**/
 tweak.maxfps = tweak(KEYS_MAXFPS);
+
+/**
+  ### `tweak.minfps(value, => constraints) => constraints`
+
+  Apply appropriate min framerate constraints.
+**/
 tweak.minfps = tweak(KEYS_MINFPS);
+
+
+/**
+  ### `tweak.fps(value, => constraints) => constraints`
+
+  Apply both min and max framerate constraints.
+**/
 tweak.fps = tweak(KEYS_MINFPS.concat(KEYS_MAXFPS));
