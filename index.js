@@ -11,6 +11,10 @@ var KEYS_MINFPS = ['minFrameRate', 'frameRate.min'];
 
   A series of functional helpers for applying transforms to media capture constraints.
 
+  ## Example Usage
+
+  <<< examples/limit-dimensions.js
+
   ## Reference
 **/
 
@@ -87,6 +91,7 @@ var tweak = module.exports = function(targets, opts) {
   return tweaker;
 };
 
+/** ### `tweak.maxwidth(value, => constraints) => constraints` **/
 tweak.maxwidth = tweak(KEYS_MAXWIDTH);
 tweak.minwidth = tweak(KEYS_MINWIDTH);
 tweak.width = tweak.w = tweak(KEYS_MINWIDTH.concat(KEYS_MAXWIDTH));
