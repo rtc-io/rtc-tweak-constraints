@@ -26,7 +26,8 @@
   "devDependencies": {
     "getusermedia": "^1.1.0",
     "rtc-ui": "^1.1.1",
-    "tape": "^3.0.1"
+    "tape": "^3.0.1",
+    "whisk": "^1.0.0"
   },
   "dependencies": {
     "curry": "^1.2.0"
